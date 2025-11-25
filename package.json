@@ -1,7 +1,7 @@
 {
   "name": "learning-website",
   "version": "1.0.0",
-  "description": "₿OSS Challenge Labs website",
+  "description": "₿OSS Challenge website",
   "private": true,
   "scripts": {
     "dev": "next dev",

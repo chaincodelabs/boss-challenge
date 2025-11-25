@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: '₿OSS Challenge Labs',
-  description: '₿OSS Challenge – start your career in Bitcoin open source',
+  title: '₿OSS Challenge',
+  description: '₿OSS Challenge – start your career in bitcoin open source',
 };
 
 export default function RootLayout({ children }) {
