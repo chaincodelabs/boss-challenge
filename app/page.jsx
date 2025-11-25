@@ -216,7 +216,7 @@ const BossChallengeLanding = () => {
                 className="group relative inline-flex items-center justify-center rounded-full bg-[#FED136] px-10 py-5 md:px-14 md:py-6 text-lg md:text-xl font-black text-[#000000] shadow-[0_0_50px_rgba(254,209,54,0.5)] transition-all hover:shadow-[0_0_80px_rgba(254,209,54,0.7)] overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <span className="relative">Apply to Join the Challenge</span>
+                <span className="relative">Apply Now</span>
               </motion.a>
             </div>
 
