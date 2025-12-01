@@ -202,7 +202,7 @@ const BossChallengeLanding = () => {
 
             {/* Subtitle */}
             <p className="text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed font-light px-4">
-              The <span className="text-[#fed137] font-semibold">₿OSS Challenge</span> is a Chaincode Labs initiative for coders serious about beginning a career in bitcoin open-source software
+              The <span className="text-[#fed137] font-semibold">₿OSS Challenge</span> is a Chaincode Labs initiative for coders serious about beginning a career in bitcoin open source software
             </p>
 
             {/* CTA Button */}
@@ -289,7 +289,7 @@ const BossChallengeLanding = () => {
                 {/* First paragraph with emphasis */}
                 <div className="relative">
                   <p className="text-base md:text-lg lg:text-xl text-[#191919]/90 leading-relaxed font-light">
-                    It's no secret that getting started in ₿OSS can be intimidating. Sometimes it's not obvious where to begin, and other times it takes an extra nudge. No matter the situation, the <span className="font-semibold text-[#191919]">₿OSS Challenge is ready to tackle obstacles</span> like these by providing guidance and scaffolding for the journey.
+                    It's no secret that getting started in ₿OSS (Bitcoin Open Source Software) can be difficult. Sometimes it's not obvious where to begin, and other times it takes an extra nudge. No matter the situation, the <span className="font-semibold text-[#191919]">₿OSS Challenge is ready to tackle obstacles</span> like these by providing guidance and scaffolding for the journey. can be intimidating. Sometimes it's not obvious where to begin, and other times it takes an extra nudge. No matter the situation, the <span className="font-semibold text-[#191919]">₿OSS Challenge is ready to tackle obstacles</span> like these by providing guidance and scaffolding for the journey.
                   </p>
                 </div>
 
@@ -485,7 +485,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="text-sm text-white/90 leading-relaxed relative z-10">
-                  The journey to becoming a <strong className="text-[#FED136]">full-time ₿OSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open-source. Join the challenge and see how far you can go!
+                  The journey to becoming a <strong className="text-[#FED136]">full-time ₿OSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open source. Join the challenge and see how far you can go!
                 </p>
               </div>
             </FadeIn>
@@ -521,7 +521,7 @@ const BossChallengeLanding = () => {
                 ₿OSS Alumni
             </h2>
               <p className="text-lg md:text-xl text-[#191919]/70 max-w-2xl mx-auto">
-                Meet the talented developers who have completed the challenge and are now contributing to bitcoin open-source projects
+                Meet the talented developers who have completed the challenge and are now contributing to bitcoin open source projects
               </p>
             </div>
           </FadeIn>
