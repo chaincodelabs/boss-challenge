@@ -1,6 +1,7 @@
 import './globals.css';
 
 export const metadata = {
+  metadataBase: new URL('https://bosschallenge.xyz'),
   title: '₿OSS Challenge',
   description: '₿OSS Challenge - start your career in bitcoin open source',
   openGraph: {
