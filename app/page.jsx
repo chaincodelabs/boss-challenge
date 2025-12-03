@@ -289,7 +289,7 @@ const BossChallengeLanding = () => {
                 {/* First paragraph with emphasis */}
                 <div className="relative">
                   <p className="text-base md:text-lg lg:text-xl text-[#191919]/90 leading-relaxed font-light">
-                    It's no secret that getting started in ₿OSS (Bitcoin Open Source Software) can be difficult. Sometimes it's not obvious where to begin, and other times it takes an extra nudge. No matter the situation, the <span className="font-semibold text-[#191919]">₿OSS Challenge is ready to tackle obstacles</span> like these by providing guidance and scaffolding for the journey. can be intimidating. Sometimes it's not obvious where to begin, and other times it takes an extra nudge. No matter the situation, the <span className="font-semibold text-[#191919]">₿OSS Challenge is ready to tackle obstacles</span> like these by providing guidance and scaffolding for the journey.
+                    It's no secret that getting started in ₿OSS (Bitcoin Open Source Software) can be difficult. Sometimes it's not obvious where to begin, and other times it takes an extra nudge. No matter the situation, the <span className="font-semibold text-[#191919]">₿OSS Challenge is ready to tackle obstacles</span> like these by providing guidance and scaffolding for the journey.
                   </p>
                 </div>
 
@@ -308,12 +308,12 @@ const BossChallengeLanding = () => {
 
             {/* Right Column - Technical Diagram */}
             <FadeIn delay={0.12} className="hidden lg:block">
-              <div className="relative w-full h-full min-h-[400px]">
+              <div className="relative w-full h-full min-h-[400px] rounded-xl overflow-hidden">
                 <Image
                   src="/img/section-background.png"
                   alt="Bitcoin Open Source Ecosystem Flow"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
             </FadeIn>
@@ -421,7 +421,7 @@ const BossChallengeLanding = () => {
                   src="/img/stage2.png"
                   alt="Stage 2 - Advanced Programs & Partnerships"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
             </FadeIn>
@@ -497,7 +497,7 @@ const BossChallengeLanding = () => {
                   src="/img/stage3.png"
                   alt="Stage 3 - Your Journey"
                   fill
-                  className="object-contain"
+                  className="object-cover"
                 />
               </div>
             </FadeIn>
