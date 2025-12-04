@@ -1204,7 +1204,6 @@ genesis = CreateGenesisBlock(1231006505, 2083236893,
 
       </div>
 
-      {/* Footer at bottom of same section */}
       <div className="w-full bg-[#0f0f0f] border-t border-white/10 py-6 md:py-8 px-8 md:px-12 lg:px-16 xl:px-24">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-6">
           {/* Copyright */}
@@ -1214,11 +1213,23 @@ genesis = CreateGenesisBlock(1231006505, 2083236893,
             </p>
           </div>
 
+          {/* Umami tracking notice */}
+          <div className="text-sm text-white/60">
+            <a 
+              href="https://visits.bitcoindevs.xyz/share/ywq0vWouFt4XWH4d/bosschallenge.xyz" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-white/80 hover:text-[#FED136] transition-colors underline"
+            >
+              Public visit count
+            </a>
+          </div>
+
           {/* Chaincode Labs Branding */}
           <div className="flex items-center gap-3 md:ml-auto">
             <div className="text-sm text-white/70 font-medium">
               ₿OSS Challenge
-      </div>
+            </div>
           </div>
         </div>
       </div>
