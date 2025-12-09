@@ -128,30 +128,6 @@ const BossChallengeLanding = () => {
           </Container>
         </motion.nav>
 
-        {/* Top announcement bar for 2026 applications */}
-        <motion.div
-          className="fixed top-0 left-0 right-0 z-40 bg-black/20 backdrop-blur-xl"
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-        >
-          <Container className="py-3">
-            <div className="flex flex-col gap-1 text-xs md:flex-row md:items-center md:justify-between md:text-sm">
-              <span className="font-medium text-white">
-                APPLICATIONS FOR THE 2026 ₿OSS CHALLENGE ARE NOW OPEN
-              </span>
-              <a 
-                href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs md:text-sm text-[#FED136] hover:text-[#FEC503] transition-colors font-semibold underline"
-              >
-                Apply Now →
-              </a>
-            </div>
-          </Container>
-        </motion.div>
-
     {/* Hero Section */}
     <section id="hero" className="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#000000] via-[#0a0a0a] to-[#1a1a1a] overflow-hidden">
       {/* Animated background elements */}
