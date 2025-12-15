@@ -20,6 +20,216 @@ const pageVariants = {
   }),
 };
 
+const TestimonialVideos = () => {
+  const [activeVideo, setActiveVideo] = React.useState(null);
+  const videoRef = React.useRef(null);
+
+  const testimonials = [
+    {
+      id: 'rita',
+      name: 'Rita',
+      role: 'LDK Node Contributor',
+      fundedBy: '₿trust',
+      videoSrc: '/videos/rita_final.mp4',
+      thumbnail: '/img/boss-alum/rita.jpg',
+      quote: "The BOSS challenge eeally helped me think deeply about bitcoin and learn more about it and open source developments",
+    },
+    {
+      id: 'nick',
+      name: 'Nick',
+      role: 'Rust Bitcoin Contributor',
+      fundedBy: 'Spiral',
+      videoSrc: '/videos/rita_final.mp4', // TODO (just for testing): we need to change this to the actua vidoe 
+      thumbnail: '/img/boss-alum/nick.png',
+      quote: "placeholder for another quote from the video here",
+    },
+    {
+      id: 'david',
+      name: 'David',
+      role: 'Bitcoin Core Contributor',
+      fundedBy: 'OpenSats',
+      videoSrc: '/videos/rita_final.mp4', // TODO (just for testing): we need to change this to the actua vid
+      thumbnail: '/img/boss-alum/david.jpg',
+      quote: "placeholder foranother quote from the video here",
+    },
+  ];
+
+  const openVideo = (testimonial) => {
+    setActiveVideo(testimonial);
+  };
+
+  const closeVideo = () => {
+    setActiveVideo(null);
+    if (videoRef.current) {
+      videoRef.current.pause();
+    }
+  };
+
+  // close video on escape key
+  React.useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') closeVideo();
+    };
+    if (activeVideo) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeVideo]);
+
+  return (
+    <>
+      {/* Thumbnails */}
+      <div className={`grid gap-6 auto-rows-fr ${testimonials.length === 1 ? 'max-w-2xl mx-auto' : testimonials.length === 2 ? 'md:grid-cols-2 max-w-4xl mx-auto' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+        {testimonials.map((testimonial, idx) => (
+          <motion.div
+            key={testimonial.id}
+            className="group relative cursor-pointer h-full"
+            onClick={() => openVideo(testimonial)}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: idx * 0.1 }}
+            whileHover={{ y: -4 }}
+          >
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border-2 border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.2)] group-hover:shadow-[0_20px_60px_rgba(254,209,54,0.2)] group-hover:border-[#FED136]/40 transition-all duration-500 h-full flex flex-col">
+              
+              <div className="relative aspect-video overflow-hidden flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]">
+                  <Image
+                    src={testimonial.thumbnail}
+                    alt={testimonial.name}
+                    fill
+                    className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                  />
+                </div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div 
+                    className="relative"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <div className="absolute inset-0 rounded-full bg-[#FED136]/20 blur-xl scale-150 group-hover:bg-[#FED136]/40 transition-all duration-500" />
+                    
+                    <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full bg-[#FED136] flex items-center justify-center shadow-[0_8px_32px_rgba(254,209,54,0.4)] group-hover:shadow-[0_12px_48px_rgba(254,209,54,0.6)] transition-all duration-300">
+                      <svg className="w-8 h-8 md:w-10 md:h-10 text-[#0f0f0f] ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </motion.div>
+                </div>
+                
+                <div className="absolute bottom-4 right-4 px-2 py-1 bg-black/60 backdrop-blur-sm rounded-md text-xs text-white/90 font-medium">
+                  Watch Story
+                </div>
+              </div>
+              
+              <div className="p-6 relative flex flex-col flex-1">
+                {/* Quote - fixed height with line clamp */}
+                <p className="text-white/70 text-sm italic mb-4 line-clamp-2 min-h-[2.5rem]">
+                  "{testimonial.quote}"
+                </p>
+                
+                {/* Person info - pushed to bottom */}
+                <div className="flex items-center gap-4 mt-auto">
+                  <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#FED136]/40 group-hover:border-[#FED136] transition-colors flex-shrink-0">
+                    <Image
+                      src={testimonial.thumbnail}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h4 className="text-white font-bold group-hover:text-[#FED136] transition-colors">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-white/60 text-sm">
+                      {testimonial.role} · <span className="text-[#FED136]">{testimonial.fundedBy}</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
+
+      {/* Video Modal */}
+      {activeVideo && (
+        <motion.div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="absolute inset-0 bg-black/95 backdrop-blur-xl"
+            onClick={closeVideo}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          />
+          
+          <motion.div
+            className="relative w-full max-w-5xl z-10"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+          >
+            <button
+              onClick={closeVideo}
+              className="absolute -top-12 right-0 md:-top-14 md:-right-2 p-2 text-white/70 hover:text-white transition-colors group"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Press ESC or click to close</span>
+                <div className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/10">
+              <video
+                ref={videoRef}
+                src={activeVideo.videoSrc}
+                className="w-full h-full object-contain"
+                controls
+                autoPlay
+                playsInline
+              />
+            </div>
+            
+            <div className="mt-6 flex items-center gap-4">
+              <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-[#FED136]/60">
+                <Image
+                  src={activeVideo.thumbnail}
+                  alt={activeVideo.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h3 className="text-white text-xl font-bold">{activeVideo.name}</h3>
+                <p className="text-white/60">
+                  {activeVideo.role} · Funded by <span className="text-[#FED136] font-semibold">{activeVideo.fundedBy}</span>
+                </p>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </>
+  );
+};
+
 const Container = ({ className = '', children }) => (
   <div
     className={`mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 ${className}`}
@@ -485,6 +695,29 @@ const BossChallengeLanding = () => {
     </section>
 
 
+
+    {/* Video Testimonials Section */}
+    <section className="py-24 md:py-32 lg:py-40 scroll-mt-20 relative overflow-hidden">
+      <Container>
+        <div className="max-w-7xl mx-auto relative z-[1]">
+          <FadeIn delay={0.05}>
+            <div className="text-center mb-16 md:mb-20">
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#191919] mb-4">
+                Testimonials
+              </h2>
+              <p className="text-lg md:text-xl text-[#191919]/70 max-w-2xl mx-auto">
+              Hear from our alumni
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <TestimonialVideos />
+          </FadeIn>
+        </div>
+      </Container>
+    </section>
 
     {/* Unified Alumni Section */}
     <section id="alum" className="py-24 md:py-32 lg:py-40 scroll-mt-20 relative overflow-hidden">
