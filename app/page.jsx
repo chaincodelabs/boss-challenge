@@ -20,6 +20,350 @@ const pageVariants = {
   }),
 };
 
+const TestimonialVideos = () => {
+  const [activeVideo, setActiveVideo] = React.useState(null);
+  const [showAll, setShowAll] = React.useState(false);
+
+  const testimonials = [
+    {
+      id: 'rita',
+      name: 'Rita',
+      role: 'LDK Node Contributor',
+      fundedBy: '₿trust',
+      vimeoId: '1146622979',
+      thumbnail: '/img/boss-alum/rita.jpg',
+      quote: "The BOSS challenge really helped me think deeply about bitcoin and learn more about it and open source developments",
+    },
+    {
+      id: 'spacebear',
+      name: 'Spacebear',
+      role: 'PayJoin Contributor',
+      fundedBy: 'Spiral',
+      vimeoId: '1146940157',
+      thumbnail: '/img/boss-alum/spacebear.png',
+      quote: "BOSS challenge is hard, but fun and deeply rewarding",
+    },
+    {
+      id: 'rob',
+      name: 'Rob',
+      role: 'BDK & Kyoto Contributor',
+      fundedBy: 'BDK Foundation',
+      vimeoId: '1146939009',
+      thumbnail: '/img/boss-alum/rob.jpg',
+      quote: "It allowed me to do a fun and rigorous course to transition my skills into bitcoin open source",
+    },
+    {
+      id: 'david',
+      name: 'David',
+      role: 'Bitcoin Core Contributor',
+      fundedBy: 'OpenSats',
+      vimeoId: '1146939536',
+      thumbnail: '/img/boss-alum/david.jpg',
+      quote: "It changed the trajectory of my career and now I get to work on awesome problems",
+    },
+    {
+      id: 'beulah',
+      name: 'Beulah',
+      role: 'FROST Contributor',
+      fundedBy: 'ANNOUNCED SOON',
+      vimeoId: '1146939910',
+      thumbnail: '/img/boss-alum/beulah.jpg',
+      quote: "This is the best program for jumpstarting your career in bitcoin open source",
+    },
+    {
+      id: 'chuks',
+      name: 'Chuks',
+      role: 'LDK Node Contributor',
+      fundedBy: '₿trust',
+      vimeoId: '1146939776',
+      thumbnail: '/img/boss-alum/chuks.jpg',
+      quote: "BOSS program was really intense, fast paced and really fun, it really changed my life",
+    },
+    {
+      id: 'janb84',
+      name: 'Janb84',
+      role: '₿OSS Contributor',
+      fundedBy: '',
+      vimeoId: '1146939429',
+      thumbnail: '/img/boss-alum/janb.png',
+      quote: "BOSS challenge was interesting and super challenging, it changed my life",
+    },
+    {
+      id: 'macgyver',
+      name: 'Ron Macgyver',
+      role: 'Silent Payments Contributor',
+      fundedBy: 'Maelstrom & OpenSats',
+      vimeoId: '1146939299',
+      thumbnail: '/img/boss-alum/macgyver.png',
+      quote: "The program was engaging, methodical and informative, it changed my perspective and my life",
+    },
+    {
+      id: 'marco',
+      name: 'Marco',
+      role: 'Bitcoin Core Contributor',
+      fundedBy: 'Brink',
+      vimeoId: '1146939175',
+      thumbnail: '/img/boss-alum/marco.jpg',
+      quote: "It's tough to get into open source on your own and this program was a very good guide",
+    },
+    {
+      id: 'martin',
+      name: 'Martin',
+      role: 'LDK Contributor',
+      fundedBy: 'Spiral',
+      vimeoId: '1146939097',
+      thumbnail: '/img/boss-alum/martin.png',
+      quote: "BOSS challenge was really motivating, deep and challenging, it really changed my life",
+    },
+    {
+      id: 'zealsham',
+      name: 'Zealsham',
+      role: 'PayJoin Contributor',
+      fundedBy: '₿trust',
+      vimeoId: '1146938801',
+      thumbnail: '/img/boss-alum/zealsham.jpg',
+      quote: "BOSS program equipped me with the technical knowledge I needed to work on bitcoin open source software full time",
+    },
+  ];
+
+  const openVideo = (testimonial) => {
+    setActiveVideo(testimonial);
+  };
+
+  const closeVideo = () => {
+    setActiveVideo(null);
+  };
+
+  const remainingCount = testimonials.length;
+
+  // close video on escape key
+  React.useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === 'Escape') closeVideo();
+    };
+    if (activeVideo) {
+      document.addEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'hidden';
+    }
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeVideo]);
+
+  return (
+    <>
+      {/* Testimonials */}
+      <div className="relative">
+        <div 
+          className={`overflow-hidden transition-all duration-500 ease-out ${
+            showAll ? 'max-h-[5000px]' : 'max-h-[680px] sm:max-h-[720px] lg:max-h-[480px]'
+          }`}
+        >
+          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+            {testimonials.map((testimonial, idx) => (
+          <motion.div
+            key={testimonial.id}
+            className="group relative cursor-pointer"
+            onClick={() => openVideo(testimonial)}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: idx * 0.05 }}
+            whileHover={{ y: -4 }}
+          >
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] border-2 border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.2)] group-hover:shadow-[0_20px_60px_rgba(254,209,54,0.2)] group-hover:border-[#FED136]/40 transition-all duration-500 h-full flex flex-col">
+              
+              <div className="relative aspect-video overflow-hidden flex-shrink-0">
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a]">
+                  {testimonial.thumbnail ? (
+                    <Image
+                      src={testimonial.thumbnail}
+                      alt={testimonial.name}
+                      fill
+                      className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-4xl font-bold text-white/20">{testimonial.name[0]}</span>
+                    </div>
+                  )}
+                </div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
+                
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <motion.div 
+                    className="relative"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <div className="absolute inset-0 rounded-full bg-[#FED136]/20 blur-lg scale-150 group-hover:bg-[#FED136]/30 transition-all duration-500" />
+                    
+                    <div className="relative w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#FED136] flex items-center justify-center shadow-[0_4px_20px_rgba(254,209,54,0.4)] group-hover:shadow-[0_8px_30px_rgba(254,209,54,0.6)] transition-all duration-300">
+                      <svg className="w-5 h-5 md:w-6 md:h-6 text-[#0f0f0f] ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+              
+              <div className="p-4 relative flex flex-col flex-1">
+                {/* Quote */}
+                {testimonial.quote && (
+                  <p className="text-white/60 text-xs italic mb-3 line-clamp-2">
+                    "{testimonial.quote}"
+                  </p>
+                )}
+                
+                {/* Person info */}
+                <div className="flex items-center gap-3 mt-auto">
+                  <div className="relative w-8 h-8 rounded-full overflow-hidden border-2 border-[#FED136]/40 group-hover:border-[#FED136] transition-colors flex-shrink-0 bg-[#2a2a2a]">
+                    {testimonial.thumbnail ? (
+                      <Image
+                        src={testimonial.thumbnail}
+                        alt={testimonial.name}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <span className="text-xs font-bold text-white/40">{testimonial.name[0]}</span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="min-w-0">
+                    <h4 className="text-white font-semibold text-sm group-hover:text-[#FED136] transition-colors truncate">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-white/50 text-xs truncate">
+                      {testimonial.fundedBy && <span className="text-[#FED136]">{testimonial.fundedBy}</span>}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+          </div>
+        </div>
+
+        {!showAll && (
+          <div 
+            className="absolute bottom-0 left-0 right-0 h-52 pointer-events-none"
+            style={{
+              background: 'linear-gradient(to top, #EAE7E2 0%, #EAE7E2 20%, rgba(234, 231, 226, 0.9) 50%, rgba(234, 231, 226, 0) 100%)'
+            }}
+          />
+        )}
+
+        <div className={`flex justify-center ${showAll ? 'mt-8' : '-mt-8 relative z-10'}`}>
+          <motion.button
+            onClick={() => setShowAll(!showAll)}
+            className="group inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-br from-[#0f0f0f] to-[#1a1a1a] text-white font-semibold rounded-full border-2 border-[#FED136]/30 hover:border-[#FED136] shadow-xl hover:shadow-[0_10px_40px_rgba(254,209,54,0.3)] transition-all duration-300"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+          >
+            <span>{showAll ? 'Show Less' : `View All ${testimonials.length} Stories`}</span>
+            <motion.svg
+              className="w-5 h-5 text-[#FED136]"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              animate={{ rotate: showAll ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </motion.svg>
+          </motion.button>
+        </div>
+      </div>
+
+      {/* Video Modal */}
+      {activeVideo && (
+        <motion.div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 md:p-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          <motion.div
+            className="absolute inset-0 bg-black/95 backdrop-blur-xl"
+            onClick={closeVideo}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          />
+          
+          <motion.div
+            className="relative w-full max-w-5xl z-10"
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+          >
+            <button
+              onClick={closeVideo}
+              className="absolute -top-12 right-0 md:-top-14 md:-right-2 p-2 text-white/70 hover:text-white transition-colors group"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">Press ESC or click to close</span>
+                <div className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </div>
+              </div>
+            </button>
+            
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-black shadow-2xl border border-white/10">
+              <iframe
+                src={`https://player.vimeo.com/video/${activeVideo.vimeoId}?autoplay=1&title=0&byline=0&portrait=0&dnt=1`}
+                className="absolute inset-0 w-full h-full"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture"
+                allowFullScreen
+                title={`${activeVideo.name} testimonial`}
+              />
+            </div>
+            
+            <div className="mt-6">
+              {/* Quote */}
+              {activeVideo.quote && (
+                <p className="text-white/80 text-lg italic mb-4">
+                  "{activeVideo.quote}"
+                </p>
+              )}
+              
+              {/* Person info */}
+              <div className="flex items-center gap-4">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-[#FED136]/60 bg-[#2a2a2a]">
+                  {activeVideo.thumbnail ? (
+                    <Image
+                      src={activeVideo.thumbnail}
+                      alt={activeVideo.name}
+                      fill
+                      className="object-cover"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-lg font-bold text-white/40">{activeVideo.name[0]}</span>
+                    </div>
+                  )}
+                </div>
+                <div>
+                  <h3 className="text-white text-lg font-bold">{activeVideo.name}</h3>
+                  <p className="text-white/60 text-sm">
+                    {activeVideo.role}{activeVideo.fundedBy && <> · <span className="text-[#FED136] font-semibold">{activeVideo.fundedBy}</span></>}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
+    </>
+  );
+};
+
 const Container = ({ className = '', children }) => (
   <div
     className={`mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8 ${className}`}
@@ -485,6 +829,29 @@ const BossChallengeLanding = () => {
     </section>
 
 
+
+    {/* Video Testimonials Section */}
+    <section className="py-24 md:py-32 lg:py-40 scroll-mt-20 relative overflow-hidden">
+      <Container>
+        <div className="max-w-7xl mx-auto relative z-[1]">
+          <FadeIn delay={0.05}>
+            <div className="text-center mb-16 md:mb-20">
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-[#191919] mb-4">
+                Testimonials
+              </h2>
+              <p className="text-lg md:text-xl text-[#191919]/70 max-w-2xl mx-auto">
+              Hear from our alumni
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn delay={0.1}>
+            <TestimonialVideos />
+          </FadeIn>
+        </div>
+      </Container>
+    </section>
 
     {/* Unified Alumni Section */}
     <section id="alum" className="py-24 md:py-32 lg:py-40 scroll-mt-20 relative overflow-hidden">
