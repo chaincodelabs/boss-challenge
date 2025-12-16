@@ -584,6 +584,15 @@ const BossChallengeLanding = () => {
                               <a href={alum.fundedByUrl2} target="_blank" rel="noopener noreferrer" className="text-[#FED136] font-semibold hover:underline" onClick={(e) => e.stopPropagation()}>Chaincode</a>
                             </>
                           );
+                        } else if (alum.name === 'Beulah') {
+                          fundingContent = (
+                            <>
+                              Funded by{' '}
+                              <a href={alum.fundedByUrl} target="_blank" rel="noopener noreferrer" className="text-[#FED136] font-semibold hover:underline" onClick={(e) => e.stopPropagation()}>Vora</a>
+                              {' and '}
+                              <a href={alum.fundedByUrl2} target="_blank" rel="noopener noreferrer" className="text-[#FED136] font-semibold hover:underline" onClick={(e) => e.stopPropagation()}>Second</a>
+                            </>
+                          );
                         } else if (alum.fundedByUrl) {
                           fundingContent = (
                             <>
@@ -649,17 +658,20 @@ const BossChallengeLanding = () => {
             </div>
                       <div className="flex-1 h-px bg-gradient-to-l from-transparent via-[#FED136]/30 to-[#FED136]/30"></div>
         </div>
-            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
               {[
                         { name: 'Sangbida', image: 'sangbida.jpg', github: 'https://github.com/sangbida', fundedBy: 'Blockstream', fundedByUrl: 'https://blockstream.com/', project: 'Core Lightning', projectUrl: 'https://github.com/ElementsProject/lightning' },
                         { name: 'Daniel', image: 'daniel.jpg', github: 'https://github.com/purplekarrot', fundedBy: 'ANNOUNCED SOON', fundedByUrl: null, project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
                         { name: 'Ben', image: 'ben.jpg', github: 'https://github.com/benalleng', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
                         { name: 'Zealsham', image: 'zealsham.jpg', github: 'https://github.com/zealsham/', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
-                        { name: 'Ron', image: 'ron.png', github: 'https://github.com/macgyver13', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'Silent Payments', projectUrl: 'https://silentpayments.xyz/' },
-                        { name: 'Beulah', image: 'beulah.jpg', github: 'https://github.com/BEULAHEVANJALIN', fundedBy: 'ANNOUNCED SOON', fundedByUrl: null, project: 'FROST', projectUrl: 'https://github.com/BEULAHEVANJALIN/frost-td-prework' },
+                        { name: 'MacGyver', image: 'macgyver.png', github: 'https://github.com/macgyver13', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'Silent Payments', projectUrl: 'https://silentpayments.xyz/' },
+                        { name: 'Beulah', image: 'beulah.jpg', github: 'BEULAHEVANJALIN', fundedBy: 'Vora and Second', fundedByUrl: 'https://vora.io', fundedByUrl2: 'https://second.tech', project: 'FROST', projectUrl: 'https://github.com/BEULAHEVANJALIN/frost-td-prework' },
                         { name: 'Rita', image: 'rita.jpg', github: 'https://github.com/camillarhi', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
+                        { name: 'Janb84', image: 'janb.png', github: 'https://github.com/janb84', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
                         { name: 'Chuks', image: 'chuks.jpg', github: 'https://github.com/chuksys', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
                         { name: 'Elnosh', image: 'elnosh.jpg', github: 'https://github.com/elnosh', fundedBy: 'OpenSats and Chaincode', fundedByUrl: 'https://opensats.org', fundedByUrl2: 'https://chaincode.com', project: 'LDK and Channel Jamming Research', projectUrl: 'https://lightningdevkit.org/', projectUrl2: 'https://github.com/carlaKC/jam-ln/' },
+                        { name: 'Martin', image: 'martin.png', github: 'https://github.com/martinsaposnic', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'LDK', projectUrl: 'https://github.com/lightningdevkit/rust-lightning' },
+                        { name: 'Ram', image: 'ram.jpg', github: 'https://github.com/pseudoramdom', fundedBy: 'ANNOUNCED SOON', fundedByUrl: null, project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
                       ].map((alum) => <AlumniCard key={alum.name} alum={alum} />)}
                     </div>
                   </div>
