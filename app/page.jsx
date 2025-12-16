@@ -124,6 +124,24 @@ const TestimonialVideos = () => {
       thumbnail: '/img/boss-alum/zealsham.jpg',
       quote: "BOSS program equipped me with the technical knowledge I needed to work on bitcoin open source software full time",
     },
+    {
+      id: 'rkrux',
+      name: 'Rkrux',
+      role: 'Bitcoin Core Contributor',
+      fundedBy: 'Maelstrom',
+      vimeoId: '1147028750',
+      thumbnail: '/img/boss-alum/rkrux.jpg',
+      quote: "Successfully completing the BOSS challenge changed my life because it allowed me to work on bitcoin core full time",
+    },
+    {
+      id: 'elnosh',
+      name: 'Elnosh',
+      role: 'LDK Contributor',
+      fundedBy: 'OpenSats & Chaincode',
+      vimeoId: '1147028874',
+      thumbnail: '/img/boss-alum/elnosh.jpg',
+      quote: "It truly changed my life, now I get to have the best job in the world which is to work on bitcoin open source",
+    },
   ];
 
   const openVideo = (testimonial) => {
