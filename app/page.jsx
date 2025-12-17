@@ -430,14 +430,11 @@ const BossChallengeLanding = () => {
   };
 
   const trackApplyClick = (location) => {
-  if (typeof window !== 'undefined' && window.umami) {
-    window.umami.track('apply_click', {
-      button_location: location,
-      referrer: document.referrer || 'direct',
-      utm_source: new URLSearchParams(window.location.search).get('utm_source') || 'none',
-    });
-  }
-};
+    if (typeof window !== 'undefined' && window.umami) {
+      const referrer = document.referrer ? new URL(document.referrer).hostname : 'direct';
+      window.umami.track(`apply_${location}_${referrer}`);
+    }
+  };
 
   return (
     <>
