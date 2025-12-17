@@ -429,6 +429,16 @@ const BossChallengeLanding = () => {
     }
   };
 
+  const trackApplyClick = (location) => {
+  if (typeof window !== 'undefined' && window.umami) {
+    window.umami.track('apply_click', {
+      button_location: location,
+      referrer: document.referrer || 'direct',
+      utm_source: new URLSearchParams(window.location.search).get('utm_source') || 'none',
+    });
+  }
+};
+
   return (
     <>
       <style dangerouslySetInnerHTML={{__html: `
@@ -481,6 +491,7 @@ const BossChallengeLanding = () => {
                   href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackApplyClick('nav')}
                   className="hidden sm:inline-flex items-center px-6 py-2.5 bg-[#FED136] text-black font-bold rounded-full hover:bg-[#FEC503] transition-all hover:scale-105 text-sm"
                 >
                   Apply
@@ -549,6 +560,7 @@ const BossChallengeLanding = () => {
                 href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={() => trackApplyClick('hero')}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="group relative inline-flex items-center justify-center rounded-full bg-[#FED136] px-10 py-5 md:px-14 md:py-6 text-lg md:text-xl font-black text-[#000000] shadow-[0_0_50px_rgba(254,209,54,0.5)] transition-all hover:shadow-[0_0_80px_rgba(254,209,54,0.7)] overflow-hidden"
@@ -1310,6 +1322,7 @@ const BossChallengeLanding = () => {
                   href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackApplyClick('footer')}
                   className="inline-flex items-center px-10 py-4 bg-[#FED136] text-[#1a1a1a] font-medium text-sm md:text-base rounded-full hover:bg-[#FEC503] transition-all duration-300 tracking-wide"
                 >
                   Apply to the ₿OSS Challenge
