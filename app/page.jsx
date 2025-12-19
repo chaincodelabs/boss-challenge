@@ -142,6 +142,24 @@ const TestimonialVideos = () => {
       thumbnail: '/img/boss-alum/elnosh.jpg',
       quote: "It truly changed my life, now I get to have the best job in the world",
     },
+    {
+      id: 'ram',
+      name: 'Ram',
+      role: 'Bitcoin Core',
+      fundedBy: 'ANNOUNCED SOON',
+      vimeoId: '1147927069',
+      thumbnail: '/img/boss-alum/ram.jpg',
+      quote: "It forced me to engage deeply with bitcoin fundamentals",
+    },
+    {
+      id: 'sangbida',
+      name: 'Sangbida',
+      role: 'Core Lightning',
+      fundedBy: 'Blockstream',
+      vimeoId: '1147783903',
+      thumbnail: '/img/boss-alum/sangbida.jpg',
+      quote: "The BOSS challenge was enlightening, testing and inspiring",
+    },
   ];
 
   const openVideo = (testimonial) => {
