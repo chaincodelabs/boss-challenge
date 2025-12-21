@@ -447,10 +447,10 @@ const BossChallengeLanding = () => {
     }
   };
 
-  const trackApplyClick = (location) => {
+  const trackApplyClick = () => {
     if (typeof window !== 'undefined' && window.umami) {
       const referrer = document.referrer ? new URL(document.referrer).hostname : 'direct';
-      window.umami.track(`apply_${location}_${referrer}`);
+      window.umami.track(`apply_${referrer}`);
     }
   };
 
