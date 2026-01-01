@@ -502,7 +502,7 @@ const BossChallengeLanding = () => {
                 <a href="#resources" className="text-sm md:text-base font-medium text-white hover:text-[#fed137] transition-colors uppercase tracking-wide">
                   Resources
                 </a>
-                <a 
+                {/* <a 
                   href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -510,7 +510,7 @@ const BossChallengeLanding = () => {
                   className="hidden sm:inline-flex items-center px-6 py-2.5 bg-[#FED136] text-black font-bold rounded-full hover:bg-[#FEC503] transition-all hover:scale-105 text-sm"
                 >
                   Apply
-                </a>
+                </a> */}
               </div>
         </div>
           </Container>
@@ -572,7 +572,7 @@ const BossChallengeLanding = () => {
             {/* CTA Button */}
             <div id="apply" className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
               <motion.a
-                href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSew4DMO6OHLVVOgsyEog7cljOkjfBLC5mkBMyaz8abdtm_M1w/viewform?usp=header"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => trackApplyClick('hero')}
@@ -581,7 +581,7 @@ const BossChallengeLanding = () => {
                 className="group relative inline-flex items-center justify-center rounded-full bg-[#FED136] px-10 py-5 md:px-14 md:py-6 text-lg md:text-xl font-black text-[#000000] shadow-[0_0_50px_rgba(254,209,54,0.5)] transition-all hover:shadow-[0_0_80px_rgba(254,209,54,0.7)] overflow-hidden"
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-                <span className="relative">Apply Now</span>
+                <span className="relative">Join the waitlist</span>
               </motion.a>
             </div>
 
@@ -1331,7 +1331,7 @@ const BossChallengeLanding = () => {
                 </h2>
               </div>
               
-              {/* CTA Button - minimal rounded style */}
+              {/* CTA Button - minimal rounded style
               <div className="pt-4">
                 <a
                   href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
@@ -1342,7 +1342,7 @@ const BossChallengeLanding = () => {
                 >
                   Apply to the ₿OSS Challenge
                 </a>
-              </div>
+              </div> */}
               
             </div>
           </FadeIn>
