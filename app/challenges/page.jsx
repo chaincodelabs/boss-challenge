@@ -152,7 +152,7 @@ export default function ChallengesPage() {
                 Resources
               </a>
               <a href="/challenges" className="text-sm md:text-base font-medium px-4 py-1.5 rounded-full border border-[#fed137]/40 text-[#fed137] hover:bg-[#fed137] hover:text-black transition-all uppercase tracking-wide">
-                Challenges
+                Portfolio Projects
               </a>
             </div>
           </div>
@@ -171,6 +171,9 @@ export default function ChallengesPage() {
           </h1>
           <p className="text-center text-lg text-[#191919]/70 mb-16">
             Portfolio Projects
+          </p>
+          <p className="text-center text-base text-[#191919]/60 -mt-12 mb-16 max-w-2xl mx-auto leading-relaxed">
+            As part of the 2026 BOSS Challenge, some participants completed self-directed portfolio projects to gain hands-on experience and apply skills they developed earlier in the program. With the freedom to choose their own topics, these projects reflect a wide variety of interests and approaches. Discover them below.
           </p>
         </motion.div>
 
