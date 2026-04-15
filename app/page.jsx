@@ -502,7 +502,10 @@ const BossChallengeLanding = () => {
                 <a href="#resources" className="text-sm md:text-base font-medium text-white hover:text-[#fed137] transition-colors uppercase tracking-wide">
                   Resources
                 </a>
-                {/* <a 
+                <a href="/challenges" className="text-sm md:text-base font-medium px-4 py-1.5 rounded-full border border-[#fed137]/40 text-[#fed137] hover:bg-[#fed137] hover:text-black transition-all uppercase tracking-wide">
+                  Portfolio Projects
+                </a>
+                {/* <a
                   href="https://job-boards.greenhouse.io/chaincodelabs/jobs/4055270009"
                   target="_blank"
                   rel="noopener noreferrer"
