@@ -1,4 +1,10 @@
-Learning at Chaincode website. Uses the Start Bootstrap theme.
+BOSS Challenge website. Uses the Start Bootstrap theme.
+
+```
+npm install
+npm run build
+npm run dev
+```
 
 ## Copyright and License
 

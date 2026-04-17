@@ -502,7 +502,7 @@ const BossChallengeLanding = () => {
                 <a href="#resources" className="text-sm md:text-base font-medium text-white hover:text-[#fed137] transition-colors uppercase tracking-wide">
                   Resources
                 </a>
-                <a href="/challenges" className="text-sm md:text-base font-medium px-4 py-1.5 rounded-full border border-[#fed137]/40 text-[#fed137] hover:bg-[#fed137] hover:text-black transition-all uppercase tracking-wide">
+                <a href="/portfolioprojects" className="text-sm md:text-base font-medium px-4 py-1.5 rounded-full border border-[#fed137]/40 text-[#fed137] hover:bg-[#fed137] hover:text-black transition-all uppercase tracking-wide">
                   Portfolio Projects
                 </a>
                 {/* <a
