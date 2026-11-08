@@ -413,6 +413,7 @@ const heroTopoMask = {
   maskImage: 'linear-gradient(90deg, rgba(0,0,0,.25) 0%, rgba(0,0,0,.25) 30%, #000 70%)',
 };
 
+/* Project logo strip — commented out along with its JSX below.
 // White-on-transparent logos in public/img/projects. `h` is the display height in px:
 // icon-only marks run taller than wordmarks so they read at a similar weight.
 const projectLogos = [
@@ -431,6 +432,7 @@ const marqueeEdgeMask = {
   WebkitMaskImage: 'linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)',
   maskImage: 'linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent)',
 };
+*/
 
 const Container = ({ className = '', children }) => (
   <div
@@ -565,17 +567,6 @@ const BossChallengeLanding = () => {
       </div>
 
       <div className="relative flex-1 flex flex-col gap-4 max-w-[1100px] mx-5 py-10 min-[700px]:ml-28 min-[700px]:mr-12">
-        <p className="mb-[clamp(8px,1.5vw,24px)] font-medium text-[length:clamp(14px,1.3vw,19px)] leading-none tracking-[0.16em] uppercase text-boss-muted">
-          <a
-            href="https://chaincode.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline decoration-boss-muted/40 underline-offset-4 hover:text-boss-text hover:decoration-boss-text transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-boss-code focus-visible:outline-offset-[3px]"
-          >
-            Chaincode Labs
-          </a>{' '}
-          presents
-        </p>
         {/* hero-logo.png is cropped to its content (no transparent border) so it aligns with the
             text; sized to the width the text headline had */}
         <h1 className="w-full max-w-[455px] min-[700px]:max-w-none min-[700px]:w-[clamp(455px,53vw,730px)]">
@@ -589,7 +580,7 @@ const BossChallengeLanding = () => {
           />
         </h1>
         <p className="mt-[clamp(8px,1.5vw,24px)] font-ui font-medium text-[length:clamp(20px,2vw,30px)] leading-[1.3] text-boss-text max-w-[29.7em]">
-          Six weeks of challenges. No deadlines. Just you, hard problems, and a chance at a career in bitcoin open-source.
+          Six weeks of challenges. No deadlines. Just you, hard problems, and a chance to show us your potential as a bitcoin contributor.
         </p>
         <p className="text-[length:clamp(15px,1.4vw,20px)] leading-[1.6] text-boss-muted">
           January 11 - February 19, 2027 · Applications open December 1
@@ -607,7 +598,9 @@ const BossChallengeLanding = () => {
       </div>
     </section>
 
-    {/* Project Logo Strip */}
+    {/* Project Logo Strip — commented out. To restore, remove this comment's opening and
+        closing markers and uncomment projectLogos / marqueeEdgeMask above.
+        (Note: the logo is a mask over a block of colour, so it takes the heading's colour.)
     <section aria-labelledby="projects-heading" className="bg-boss-bg border-y border-boss-line py-10 overflow-hidden">
       <h2 id="projects-heading" className="mb-10 pb-10 border-b border-boss-line px-5 text-center font-ui font-medium not-italic text-[length:clamp(16px,1.8vw,26px)] leading-[1.4] tracking-[0.12em] uppercase text-boss-muted">
         The proof is in the contributions
@@ -618,7 +611,6 @@ const BossChallengeLanding = () => {
             <ul key={copy} aria-hidden={copy === 1} className="flex shrink-0 items-center gap-24 pr-24 md:gap-36 md:pr-36">
               {projectLogos.map((logo) => (
                 <li key={logo.file} className="shrink-0">
-                  {/* The logo is a mask over a block of colour, so it takes the heading's colour */}
                   <span
                     role={copy === 0 ? 'img' : undefined}
                     aria-label={copy === 0 ? logo.name : undefined}
@@ -637,6 +629,7 @@ const BossChallengeLanding = () => {
         </div>
       </div>
     </section>
+    */}
 
     {/* Unified Gradient Background Wrapper for all sections after hero */}
     <div className="relative">
@@ -650,7 +643,7 @@ const BossChallengeLanding = () => {
           <FadeIn delay={0.05}>
             <div className="text-center mb-16 md:mb-20">
               <h2 className="text-[36px] md:text-[52px] lg:text-[64px] leading-[0.95] font-bold not-italic text-boss-bg">
-                WE&apos;RE LOOKING FOR REALLY GOOD PEOPLE
+                ABOUT
               </h2>
             </div>
           </FadeIn>
@@ -664,11 +657,11 @@ const BossChallengeLanding = () => {
                 {/* First paragraph with emphasis */}
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    There's never been anything like bitcoin. For the first time in history we have open, censorship-resistant money that cannot be controlled or debased. Today, the bitcoin network secures over a trillion dollars. For something so important you'd expect an army of engineers building and maintaining it. In reality, that group is far smaller than you'd expect.
+                    There’s never been anything like bitcoin. Programmable, open-source money that anyone can use without asking permission. It’s easy to forget that today’s trillion-dollar market started with an email to an obscure cryptography mailing list. Bitcoin has changed significantly since then, but the people building it still care about the same thing: building money that no one can control. There are fewer of us than you’d think, and we have plenty of work to do. We still need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
                   </p>
                   <br />
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    Part of why there aren't more bitcoin developers is that breaking into ₿OSS (Bitcoin Open Source Software) can be hard. With no hiring pipeline or onboarding process, many find it difficult to know where to start. Even if you have that part figured out, standards are high and it can be a long, lonely journey alone.
+                    Working in bitcoin open source isn’t like any other job. There are no deadlines, no product managers, just people around the world working together. You can build a career here, but it’s hard to know where to start. Learning to chart your own course is part of becoming a good contributor but finding your way alone can be a long and lonely process.
                   </p>
                 </div>
 
@@ -677,7 +670,7 @@ const BossChallengeLanding = () => {
 
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    The ₿OSS Challenge exists to change that. It provides the light scaffolding and peer support needed to establish a meaningful track record. Participants can then rise above the noise, separate their work from the crowd, and show the world what they've got.
+                  The ₿OSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that let you show us what you could bring to bitcoin as a contributor. You’ll also have the chance to work with other participants and get a feel for what a career in bitcoin open source could be like. If you do well, we’ll talk with you about how you could make that transition.
                   </p>
                 </div>
 
@@ -827,7 +820,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are also no deadlines or green check marks. Just do your best and work through the challenges at your own pace. Async discussion and support will be available from ₿OSS contributors that have stood in your shoes.
+                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are also no deadlines or green check marks. You set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from ₿OSS alumni who’ve been in your shoes, and even help to your fellow participants along the way.
                 </p>
               </div>
             </FadeIn>
@@ -863,7 +856,7 @@ const BossChallengeLanding = () => {
                   The journey to becoming a <strong className="text-boss-text font-semibold">full-time ₿OSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open source.
                   <br />
                   <br />
-                  Participants that stood out during the challenges are invited to have a call with Chaincode Labs to help plan their career in bitcoin open-source. Options for continuing education will be available to all.
+                  If your work stands out during the challenges, we’ll invite you to a call with Chaincode Labs to discuss opportunities in bitcoin open source and what your next step could be. All participants will have access to options for continuing their education.
                 </p>
               </div>
             </FadeIn>
@@ -1096,12 +1089,12 @@ const BossChallengeLanding = () => {
                       { year: 2026, name: 'Trevor', image: 'trevor.jpg', github: 'https://github.com/trevarj', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'BHWI', projectUrl: 'https://github.com/wizardsardine/bhwi', project2: 'rust-miniscript', projectUrl2: 'https://github.com/rust-bitcoin/rust-miniscript' },
                       { year: 2026, name: 'Razor', image: 'razor.jpg', github: 'https://github.com/razorbest', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'peer-observer', projectUrl:'https://github.com/peer-observer' },
                       { year: 2026, name: 'Abeeujah', image: 'abeeujah.jpg', github: 'https://github.com/Abeeujah', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'rust-bitcoin', projectUrl: 'https://github.com/rust-bitcoin/rust-bitcoin' },
+                      { year: 2026, name: 'ek', image: 'ek.jpg', github: 'https://github.com/ekzyis', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'smite', projectUrl: 'https://github.com/lnfuzz/smite' },
                       { year: 2026, name: 'Vadim', image: 'vadim.jpg', github: 'https://github.com/vadim-anfv', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'BDK', projectUrl: 'https://bitcoindevkit.org/' },
                       { year: 2026, name: 'su', image: 'su.jpg', github: 'https://github.com/xstoicunicornx', fundedBy: 'Payjoin Foundation', fundedByUrl: 'https://payjoin.org/foundation', project: 'Payjoin', projectUrl: 'https://payjoindevkit.org/' },
                       { year: 2026, name: 'Yeji', image: 'yeji.jpg', github: 'https://github.com/febyeji', project: 'lean-miniscript', projectUrl: 'https://github.com/febyeji/lean-miniscript' },
                       { year: 2026, name: 'Peter', image: 'peter.jpg', github: 'https://github.com/pzafonte', project: 'kernel-node', projectUrl: 'https://github.com/kernel-node/kernel-node' },
                       { year: 2026, name: 'Noah', image: 'noah.png', github: 'https://github.com/noahjoeris', project: 'BDK', projectUrl: 'https://bitcoindevkit.org/' },
-                      { year: 2026, name: 'ek', image: 'ek.jpg', github: 'https://github.com/ekzyis', project: 'smite', projectUrl: 'https://github.com/lnfuzz/smite' },
                       { year: 2026, name: 'Valera', image: 'valera.png', github: 'https://github.com/valerafinebits', project: 'Payjoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
                       { year: 2026, name: 'Alexander', image: 'alexander.png', github: 'https://github.com/randomlogin', project: 'LDK', projectUrl: 'https://github.com/lightningdevkit/rust-lightning' },
                       { year: 2025, name: 'deadmanoz', image: 'deadmanoz.png', github: 'https://github.com/deadmanoz', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'BNOC', projectUrl: 'https://bnoc.xyz/', project2: 'peer-observer', projectUrl2: 'https://github.com/0xB10C/peer-observer' },
@@ -1267,10 +1260,10 @@ const BossChallengeLanding = () => {
                   
                 <div className="space-y-6 font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
                     <p>
-                    Chaincode Labs is a Bitcoin research and development center based in New York City. We focus on the development of the bitcoin network and related technologies. A critical part of our work is creating a space for those seeking a solid foundation with which to contribute to the bitcoin ecosystem.
+                    Chaincode Labs is a Bitcoin research and development center based in New York City. We exist to support Bitcoin. One way we do this is by running programs that help current and future contributors do meaningful work in Bitcoin open source.
                   </p>
                     <p>
-                    Since 2016, our residency program has helped to train and develop the next generation of Bitcoin and Lightning protocol and application engineers.
+                    Our residency programs, online seminars, and the ₿OSS Challenge have been a first step for many of the developers working in the Bitcoin open-source ecosystem today.
                   </p>
                   </div>
                   
