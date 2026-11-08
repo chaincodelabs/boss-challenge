@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Cold Storage brand palette. Colors are stored as RGB channels so Tailwind's opacity modifiers
+   (e.g. bg-boss-bg/80) work. Orange is the single action color, kept to ~5% of any screen;
+   teal is reserved for code and data. */
+:root {
+  --boss-bg: 11 14 18;            /* #0B0E12 Cold Storage */
+  --boss-surface: 19 25 32;       /* #131920 Vault */
+  --boss-line: 35 44 54;          /* #232C36 Seam */
+  --boss-text: 230 234 239;       /* #E6EAEF Paper */
+  --boss-text-bright: 247 249 251; /* #F7F9FB hero headline only */
+  --boss-muted: 139 151 165;      /* #8B97A5 Fog */
+  --boss-accent: 247 147 26;      /* #F7931A Signal Orange */
+  --boss-accent-press: 196 111 8; /* #C46F08 Orange Deep */
+  --boss-code: 79 201 193;        /* #4FC9C1 Ledger Teal */
+  --boss-on-accent: 11 14 18;     /* #0B0E12 */
+  --boss-font-display: var(--font-barlow-condensed), 'Barlow Condensed', sans-serif;
+  --boss-font-body: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+  --boss-font-ui: var(--font-archivo), 'Archivo', sans-serif;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -13,10 +32,63 @@ body {
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Text',
-    'SF Pro Display', ui-sans-serif, -system-ui, sans-serif;
-  background: transparent;
-  color: #191919;
+  font-family: var(--boss-font-body);
+  background: rgb(var(--boss-bg));
+  color: rgb(var(--boss-text));
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--boss-font-display);
+}
+
+/* Display type defaults to italic; use not-italic for upright headings */
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-style: italic;
+}
+
+@layer components {
+  /* 45° cut top-right corner. Pair .notch with an optional size modifier. */
+  .notch {
+    --notch: 16px;
+    clip-path: polygon(0 0, calc(100% - var(--notch)) 0, 100% var(--notch), 100% 100%, 0 100%);
+  }
+  .notch-sm {
+    --notch: 10px;
+  }
+  .notch-lg {
+    --notch: 32px;
+  }
+
+  /* clip-path hides the border along the cut; this redraws it as a diagonal.
+     Assumes a 1px border. Recolor with [--notch-line:...]. */
+  .notch-border {
+    --notch-line: rgb(var(--boss-line));
+    position: relative;
+  }
+  .notch-border::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+    width: var(--notch);
+    height: var(--notch);
+    background: linear-gradient(
+      to bottom left,
+      transparent calc(50% - 1px),
+      var(--notch-line) calc(50% - 1px),
+      var(--notch-line) calc(50% + 1px),
+      transparent calc(50% + 1px)
+    );
+    pointer-events: none;
+    transition: background 0.3s;
+  }
 }
 
 @layer utilities {
@@ -34,13 +106,32 @@ body {
     }
   }
 
+  /* Endless horizontal scroll: the track holds two identical copies, so moving it by
+     half its width lands exactly where it started. Speed depends on the track's width, so
+     retune the duration when logos or gaps change (currently ~31px/s on desktop). */
+  .animate-marquee {
+    animation: marquee 62s linear infinite;
+  }
+
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+
   /* Custom scrollbar styles */
   .scrollbar-thin {
     scrollbar-width: thin;
   }
 
   .scrollbar-thumb-\[#FED136\/30\] {
-    scrollbar-color: rgba(254, 209, 54, 0.3) transparent;
+    scrollbar-color: rgb(var(--boss-line)) transparent;
   }
 
   .scrollbar-track-transparent {
@@ -57,11 +148,11 @@ body {
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb {
-    background: rgba(254, 209, 54, 0.3);
+    background: rgb(var(--boss-line));
     border-radius: 3px;
   }
 
   .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-    background: rgba(254, 209, 54, 0.5);
+    background: rgb(var(--boss-muted));
   }
 }

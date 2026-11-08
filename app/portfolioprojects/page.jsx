@@ -2,20 +2,11 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { viet } from '../fonts';
-
-const INITIAL_COLORS = {
-  A: "#E8A838", B: "#3B6B3B", C: "#D94040", D: "#8B5E3C", E: "#B8A070",
-  F: "#5C4033", G: "#6B7B3A", H: "#3A6B6B", I: "#5DADE2", J: "#7D3C98",
-  K: "#6B6B3A", L: "#5C4033", M: "#C0392B", N: "#27AE60", O: "#2C3E50",
-  P: "#8E44AD", Q: "#7F8C8D", R: "#6B4226", S: "#D4AC0D", T: "#E74C8F",
-  U: "#1ABC9C", V: "#E67E22", W: "#2ECC71", X: "#95A5A6", Y: "#F1C40F",
-  Z: "#E59866",
-};
+import Link from 'next/link';
+import { asset } from '../asset';
 
 function Avatar({ username, avatarUrl, size = 44 }) {
   const initial = username.charAt(0).toUpperCase();
-  const bgColor = INITIAL_COLORS[initial] || "#7F8C8D";
 
   if (avatarUrl) {
     return (
@@ -24,7 +15,7 @@ function Avatar({ username, avatarUrl, size = 44 }) {
         alt={username}
         width={size}
         height={size}
-        className="rounded-full object-cover"
+        className="object-cover"
         style={{ width: size, height: size }}
       />
     );
@@ -32,8 +23,8 @@ function Avatar({ username, avatarUrl, size = 44 }) {
 
   return (
     <div
-      className="rounded-full flex items-center justify-center text-white font-bold"
-      style={{ width: size, height: size, backgroundColor: bgColor, fontSize: size * 0.42 }}
+      className="flex items-center justify-center bg-boss-line text-boss-muted font-display font-bold"
+      style={{ width: size, height: size, fontSize: size * 0.42 }}
     >
       {initial}
     </div>
@@ -55,7 +46,7 @@ function ProjectCard({ project }) {
           {members.map((member, idx) => (
             <div
               key={member.username}
-              className="relative rounded-full border-2 border-[#FDF6EC]"
+              className="notch notch-sm relative overflow-hidden border-2 border-boss-bg"
               style={{ marginLeft: idx > 0 ? -12 : 0, zIndex: members.length - idx }}
             >
               <Avatar username={member.username} avatarUrl={member.avatarUrl} size={44} />
@@ -66,7 +57,7 @@ function ProjectCard({ project }) {
           href={repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-[#E8A838] rounded-full border border-transparent hover:border-[#E8A838] transition-colors"
+          className="notch notch-sm notch-border flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-boss-code border border-boss-line [--notch-line:rgb(var(--boss-line))] hover:border-boss-code hover:[--notch-line:rgb(var(--boss-code))] transition-colors"
         >
           <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" className="flex-shrink-0">
             <path fillRule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z" />
@@ -74,7 +65,7 @@ function ProjectCard({ project }) {
           View Project
         </a>
       </div>
-      <div className="flex items-center gap-1 text-sm font-semibold text-[#1a1a1a]">
+      <div className="flex items-center gap-1 text-sm font-semibold text-boss-text">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="flex-shrink-0">
           <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
           <circle cx="9" cy="7" r="4" />
@@ -83,7 +74,7 @@ function ProjectCard({ project }) {
         </svg>
         {members.map((m) => m.username).join(", ")}
       </div>
-      <p className="text-sm text-[#1a1a1a] leading-relaxed">{description}</p>
+      <p className="text-sm text-boss-muted leading-relaxed">{description}</p>
     </motion.div>
   );
 }
@@ -149,33 +140,31 @@ const projects = [
 
 export default function PortfolioProjectsPage() {
   return (
-    <div className={`${viet.className} min-h-screen bg-[#FDF6EC]`}>
+    <div className="min-h-screen bg-boss-bg text-boss-text">
       {/* Navigation */}
       <motion.nav
-        className="fixed top-0 left-0 right-0 z-50 bg-[#0a0a0a]/95 backdrop-blur-xl border-b border-white/10"
+        className="fixed top-0 left-0 right-0 z-50 bg-boss-bg border-b border-boss-line"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12 py-4">
-          <div className="flex items-center justify-between">
-            <a href="/" className="text-xl md:text-2xl font-bold text-[#fed137] hover:text-[#fed137]/80 transition-colors">
-              ₿OSS Challenge
-            </a>
-            <div className="flex items-center gap-6 md:gap-8">
-              <a href="/#about" className="text-sm md:text-base font-medium text-white hover:text-[#fed137] transition-colors uppercase tracking-wide">
-                About
-              </a>
-              <a href="/#alum" className="text-sm md:text-base font-medium text-white hover:text-[#fed137] transition-colors uppercase tracking-wide">
-                Alum
-              </a>
-              <a href="/#resources" className="text-sm md:text-base font-medium text-white hover:text-[#fed137] transition-colors uppercase tracking-wide">
-                Resources
-              </a>
-              <a href="/portfolioprojects" className="text-sm md:text-base font-medium px-4 py-1.5 rounded-full border border-[#fed137]/40 text-[#fed137] hover:bg-[#fed137] hover:text-black transition-all uppercase tracking-wide">
-                Portfolio Projects
-              </a>
-            </div>
+        <div className="flex items-center justify-between px-5 sm:px-12 py-5">
+          <Link href="/" className="block hover:opacity-80 transition-opacity">
+            <img src={asset('/img/chaincode-logomark-yellow.png')} alt="Chaincode" className="h-6 w-auto" />
+          </Link>
+          <div className="flex items-center gap-5 md:gap-8 text-sm md:text-base text-boss-muted">
+            <Link href="/#about" className="hidden sm:inline hover:text-boss-text transition-colors">
+              About
+            </Link>
+            <Link href="/#alum" className="hidden sm:inline hover:text-boss-text transition-colors">
+              Alum
+            </Link>
+            <Link href="/#resources" className="hidden sm:inline hover:text-boss-text transition-colors">
+              Resources
+            </Link>
+            <Link href="/portfolioprojects" aria-current="page" className="whitespace-nowrap text-boss-text">
+              Portfolio Projects
+            </Link>
           </div>
         </div>
       </motion.nav>
@@ -187,13 +176,13 @@ export default function PortfolioProjectsPage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-4 text-[#191919]">
+          <h1 className="text-4xl md:text-5xl font-bold text-center leading-tight mb-4 text-boss-text">
             2026 ₿OSS Challenge
           </h1>
-          <p className="text-center text-lg text-[#191919]/70 mb-16">
+          <p className="text-center text-lg text-boss-muted mb-16">
             Portfolio Projects
           </p>
-          <p className="text-center text-base text-[#191919]/60 -mt-12 mb-16 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-center text-base text-boss-muted -mt-12 mb-16 max-w-2xl mx-auto leading-relaxed">
             As part of the 2026 BOSS Challenge, some participants completed self-directed portfolio projects to gain hands-on experience and apply skills they developed earlier in the program. With the freedom to choose their own topics, these projects reflect a wide variety of interests and approaches. Discover them below.
           </p>
         </motion.div>
@@ -213,15 +202,15 @@ export default function PortfolioProjectsPage() {
       </main>
 
       {/* Footer */}
-      <div className="w-full bg-[#0f0f0f] border-t border-white/10 py-6 md:py-8 px-8 md:px-12 lg:px-16 xl:px-24">
+      <div className="w-full bg-boss-bg border-t border-boss-line py-6 md:py-8 px-8 md:px-12 lg:px-16 xl:px-24">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-start gap-6">
           <div className="text-left">
-            <p className="text-sm text-white/80">
+            <p className="text-sm text-boss-muted">
               &copy; {new Date().getFullYear()} Chaincode Labs
             </p>
           </div>
           <div className="flex items-center gap-3 md:ml-auto">
-            <div className="text-sm text-white/70 font-medium">
+            <div className="font-display text-sm text-boss-muted font-medium">
               ₿OSS Challenge
             </div>
           </div>
