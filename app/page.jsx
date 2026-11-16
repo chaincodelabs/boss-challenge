@@ -580,7 +580,7 @@ const BossChallengeLanding = () => {
           />
         </h1>
         <p className="mt-[clamp(8px,1.5vw,24px)] font-ui font-medium text-[length:clamp(20px,2vw,30px)] leading-[1.3] text-boss-text max-w-[29.7em]">
-          Six weeks of challenges. No deadlines. Just you, hard problems, and a chance to show us your potential as a bitcoin contributor.
+          Six weeks. No deadlines. Just you, hard problems, and a chance to show your potential as a bitcoin contributor.
         </p>
         <p className="text-[length:clamp(15px,1.4vw,20px)] leading-[1.6] text-boss-muted">
           January 11 - February 19, 2027 · Applications open December 1
@@ -657,11 +657,17 @@ const BossChallengeLanding = () => {
                 {/* First paragraph with emphasis */}
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    There’s never been anything like bitcoin. Programmable, open-source money that anyone can use without asking permission. It’s easy to forget that today’s trillion-dollar market started with an email to an obscure cryptography mailing list. Bitcoin has changed significantly since then, but the people building it still care about the same thing: building money that no one can control. There are fewer of us than you’d think, and we have plenty of work to do. We still need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
+                    There’s never been anything like bitcoin. Programmable, open-source money that anyone can use without asking permission. It’s easy to forget that today’s trillion-dollar market started with an email to an obscure cryptography mailing list. Bitcoin has changed significantly since then, but the people building it still care about the same thing: building money that no one can control, and everyone can use.
                   </p>
                   <br />
+
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    Working in bitcoin open source isn’t like any other job. There are no deadlines, no product managers, just people around the world working together. You can build a career here, but it’s hard to know where to start. Learning to chart your own course is part of becoming a good contributor but finding your way alone can be a long and lonely process.
+                    We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
+                  </p>
+
+                  <br />
+                  <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
+                    Working in bitcoin open source isn’t like any other job. There are no deadlines, no product managers, just people around the world working together. You can build a career here, and learning to chart your own course is part of becoming a good contributor. But getting started on yor own can be slow and lonely.
                   </p>
                 </div>
 
@@ -820,7 +826,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are also no deadlines or green check marks. You set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from ₿OSS alumni who’ve been in your shoes, and even help to your fellow participants along the way.
+                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are no deadlines or green check marks, you set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from ₿OSS Challenge alumni who’ve been in your shoes, and even help your fellow participants along the way.
                 </p>
               </div>
             </FadeIn>
