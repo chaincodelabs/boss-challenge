@@ -3,11 +3,17 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Don't let two deploys race each other.
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -17,8 +23,15 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: npm
+      - uses: actions/configure-pages@v5
+        id: pages
       - run: npm ci
+      # base_path is the site's subpath: "/boss-challenge" on a project site like
+      # satsie.github.io/boss-challenge, empty on a custom domain like bosschallenge.xyz.
       - run: npm run build
+        env:
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
