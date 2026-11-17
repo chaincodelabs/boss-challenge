@@ -1121,7 +1121,7 @@ const BossChallengeLanding = () => {
                 LEARNING RESOURCES
               </h2>
               <p className="text-xl text-boss-bg/70">
-                Free, world-class content to accelerate your Bitcoin journey
+                Free, world-class content to accelerate your bitcoin journey
               </p>
             </div>
           </FadeIn>
@@ -1131,7 +1131,7 @@ const BossChallengeLanding = () => {
               {[
                 {
                   title: 'Self Paced Seminars',
-                  description: 'Materials are available for anyone to use with readings and discussion questions on various Bitcoin and Lightning topics.',
+                  description: 'Materials are available for anyone to use with readings and discussion questions on various bitcoin and lightning topics.',
                   icon: '/img/lightning.png',
                   url: 'https://chaincode.gitbook.io/seminars/'
                 },
@@ -1143,7 +1143,7 @@ const BossChallengeLanding = () => {
                 },
                 {
                   title: 'Bitcoin Development Philosophy',
-                  description: 'A guide for Bitcoin developers who already understand the basics of concepts and processes such as Proof-of-Work, block building, and the transaction life cycle, and who want to level up by gaining a deeper understanding of Bitcoin\'s design trade-offs and philosophy.',
+                  description: 'A guide for bitcoin developers who already understand the basics of concepts and processes such as Proof-of-Work, block building, and the transaction life cycle, and who want to level up by gaining a deeper understanding of bitcoin\'s design trade-offs and philosophy.',
                   icon: '/img/bitcoindev-philosophy.png',
                   url: 'https://bitcoindevphilosophy.com'
                 },
@@ -1243,10 +1243,10 @@ const BossChallengeLanding = () => {
                   
                 <div className="space-y-6 font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
                     <p>
-                    Chaincode Labs is a Bitcoin research and development center based in New York City. We exist to support Bitcoin. One way we do this is by running programs that help current and future contributors do meaningful work in Bitcoin open source.
+                    Chaincode Labs is a bitcoin research and development center based in New York City. We exist to support bitcoin. One way we do this is by running programs that help current and future contributors do meaningful work in Bitcoin open source.
                   </p>
                     <p>
-                    Our residency programs, online seminars, and the BOSS Challenge have been a first step for many of the developers working in the Bitcoin open-source ecosystem today.
+                    Our residency programs, online seminars, and the BOSS Challenge have been a first step for many of the developers working in the bitcoin open-source ecosystem today.
                   </p>
                   </div>
                   
