@@ -695,29 +695,6 @@ const BossChallengeLanding = () => {
               </div>
             </FadeIn>
           </div>
-
-          {/* Top Performers Card - Below Content and Image
-          <FadeIn delay={0.15}>
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0] border border-[#FED136]/20 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(254,209,54,0.15)] transition-all duration-300">
-              <div className="p-6 md:p-8">
-                <div className="flex flex-col md:flex-row items-start gap-5 md:gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#FED136] to-[#FEC503] flex items-center justify-center shadow-md">
-                    <svg className="w-6 h-6 md:w-7 md:h-7 text-[#191919]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg md:text-xl font-bold text-[#191919] mb-2">
-                      Top Performers Get Extra Support
-                    </h3>
-                    <p className="text-sm md:text-base text-[#191919]/80 leading-relaxed">
-                      Top performers from month 1 may be offered <span className="font-semibold text-boss-bg">extra support and 1:1 mentorship</span> during months 2 and 3, with the goal of <span className="font-semibold text-boss-bg">securing full-time funding</span> in the ₿OSS ecosystem.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </FadeIn> */}
         </div>
       </Container>
     </section>
