@@ -145,7 +145,7 @@ const TestimonialVideos = () => {
       id: 'ram',
       name: 'Ram',
       role: 'Bitcoin Core',
-      fundedBy: 'ANNOUNCED SOON',
+      fundedBy: 'Localhost Research',
       vimeoId: '1147927069',
       thumbnail: '/img/boss-alum/ram.jpg',
       quote: "It forced me to engage deeply with bitcoin fundamentals",
