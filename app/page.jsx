@@ -64,7 +64,7 @@ const TestimonialVideos = () => {
       id: 'rita',
       name: 'Rita',
       role: 'LDK Node',
-      fundedBy: '₿trust',
+      fundedBy: 'Btrust',
       vimeoId: '1147090091',
       thumbnail: '/img/boss-alum/rita.jpg',
       quote: "The BOSS challenge really helped me think deeply about bitcoin",
@@ -73,7 +73,7 @@ const TestimonialVideos = () => {
       id: 'chuks',
       name: 'Chuks',
       role: 'LDK Node',
-      fundedBy: '₿trust',
+      fundedBy: 'Btrust',
       vimeoId: '1147095372',
       thumbnail: '/img/boss-alum/chuks.jpg',
       quote: "BOSS program was really intense and fast paced... it really changed my life",
@@ -81,7 +81,7 @@ const TestimonialVideos = () => {
     {
       id: 'janb84',
       name: 'Janb84',
-      role: '₿OSS',
+      role: 'BOSS',
       fundedBy: 'OpenSats',
       vimeoId: '1147095655',
       thumbnail: '/img/boss-alum/janb.png',
@@ -118,7 +118,7 @@ const TestimonialVideos = () => {
       id: 'zealsham',
       name: 'Zealsham',
       role: 'PayJoin',
-      fundedBy: '₿trust',
+      fundedBy: 'Btrust',
       vimeoId: '1147097189',
       thumbnail: '/img/boss-alum/zealsham.jpg',
       quote: "The program equipped me with the knowledge to work on bitcoin full time",
@@ -676,7 +676,7 @@ const BossChallengeLanding = () => {
 
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                  The ₿OSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that let you show us what you could bring to bitcoin as a contributor. You’ll also have the chance to work with other participants and get a feel for what a career in bitcoin open source could be like. If you do well, we’ll talk with you about how you could make that transition.
+                  The BOSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that let you show us what you could bring to bitcoin as a contributor. You’ll also have the chance to work with other participants and get a feel for what a career in bitcoin open source could be like. If you do well, we’ll talk with you about how you could make that transition.
                   </p>
                 </div>
 
@@ -826,7 +826,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are no deadlines or green check marks, you set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from ₿OSS Challenge alumni who’ve been in your shoes, and even help your fellow participants along the way.
+                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are no deadlines or green check marks, you set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from BOSS Challenge alumni who’ve been in your shoes, and even help your fellow participants along the way.
                 </p>
               </div>
             </FadeIn>
@@ -859,7 +859,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time ₿OSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open source.
+                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time BOSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open source.
                   <br />
                   <br />
                   If your work stands out during the challenges, we’ll invite you to a call with Chaincode Labs to discuss opportunities in bitcoin open source and what your next step could be. All participants will have access to options for continuing their education.
@@ -1094,7 +1094,7 @@ const BossChallengeLanding = () => {
                       { year: 2026, name: 'Weikeng', image: 'weikeng.png', github: 'https://github.com/weikengchen', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'Bitcoin PIR', projectUrl: 'https://github.com/Bitcoin-PIR/Bitcoin-PIR' },
                       { year: 2026, name: 'Trevor', image: 'trevor.jpg', github: 'https://github.com/trevarj', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'BHWI', projectUrl: 'https://github.com/wizardsardine/bhwi', project2: 'rust-miniscript', projectUrl2: 'https://github.com/rust-bitcoin/rust-miniscript' },
                       { year: 2026, name: 'Razor', image: 'razor.jpg', github: 'https://github.com/razorbest', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'peer-observer', projectUrl:'https://github.com/peer-observer' },
-                      { year: 2026, name: 'Abeeujah', image: 'abeeujah.jpg', github: 'https://github.com/Abeeujah', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'rust-bitcoin', projectUrl: 'https://github.com/rust-bitcoin/rust-bitcoin' },
+                      { year: 2026, name: 'Abeeujah', image: 'abeeujah.jpg', github: 'https://github.com/Abeeujah', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'rust-bitcoin', projectUrl: 'https://github.com/rust-bitcoin/rust-bitcoin' },
                       { year: 2026, name: 'ek', image: 'ek.jpg', github: 'https://github.com/ekzyis', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'smite', projectUrl: 'https://github.com/lnfuzz/smite' },
                       { year: 2026, name: 'Vadim', image: 'vadim.jpg', github: 'https://github.com/vadim-anfv', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'BDK', projectUrl: 'https://bitcoindevkit.org/' },
                       { year: 2026, name: 'su', image: 'su.jpg', github: 'https://github.com/xstoicunicornx', fundedBy: 'Payjoin Foundation', fundedByUrl: 'https://payjoin.org/foundation', project: 'Payjoin', projectUrl: 'https://payjoindevkit.org/' },
@@ -1107,12 +1107,12 @@ const BossChallengeLanding = () => {
                       { year: 2025, name: 'Sangbida', image: 'sangbida.jpg', github: 'https://github.com/sangbida', fundedBy: 'Blockstream', fundedByUrl: 'https://blockstream.com/', project: 'Core Lightning', projectUrl: 'https://github.com/ElementsProject/lightning' },
                       { year: 2025, name: 'Daniel', image: 'daniel.jpg', github: 'https://github.com/purplekarrot', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
                       { year: 2025, name: 'Ben', image: 'ben.jpg', github: 'https://github.com/benalleng', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
-                      { year: 2025, name: 'Zealsham', image: 'zealsham.jpg', github: 'https://github.com/zealsham/', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
+                      { year: 2025, name: 'Zealsham', image: 'zealsham.jpg', github: 'https://github.com/zealsham/', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
                       { year: 2025, name: 'MacGyver', image: 'macgyver.png', github: 'https://github.com/macgyver13', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'Silent Payments', projectUrl: 'https://silentpayments.xyz/' },
                       { year: 2025, name: 'Beulah', image: 'beulah.jpg', github: 'https://github.com/BEULAHEVANJALIN', fundedBy: 'Vora and Second', fundedByUrl: 'https://vora.io', fundedByUrl2: 'https://second.tech', project: 'FROST', projectUrl: 'https://github.com/BEULAHEVANJALIN/frost-td-prework' },
-                      { year: 2025, name: 'Rita', image: 'rita.jpg', github: 'https://github.com/camillarhi', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
+                      { year: 2025, name: 'Rita', image: 'rita.jpg', github: 'https://github.com/camillarhi', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
                       { year: 2025, name: 'Janb84', image: 'janb.png', github: 'https://github.com/janb84', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
-                      { year: 2025, name: 'Chuks', image: 'chuks.jpg', github: 'https://github.com/chuksys', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
+                      { year: 2025, name: 'Chuks', image: 'chuks.jpg', github: 'https://github.com/chuksys', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
                       { year: 2025, name: 'Elnosh', image: 'elnosh.jpg', github: 'https://github.com/elnosh', fundedBy: 'OpenSats and Chaincode', fundedByUrl: 'https://opensats.org', fundedByUrl2: 'https://chaincode.com', project: 'LDK and Channel Jamming Research', projectUrl: 'https://lightningdevkit.org/', projectUrl2: 'https://github.com/carlaKC/jam-ln/' },
                       { year: 2025, name: 'Martin', image: 'martin.png', github: 'https://github.com/martinsaposnic', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'LDK', projectUrl: 'https://github.com/lightningdevkit/rust-lightning' },
                       { year: 2025, name: 'Ram', image: 'ram.jpg', github: 'https://github.com/pseudoramdom', fundedBy: 'localhost', fundedByUrl: 'https://lclhost.org', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
@@ -1269,7 +1269,7 @@ const BossChallengeLanding = () => {
                     Chaincode Labs is a Bitcoin research and development center based in New York City. We exist to support Bitcoin. One way we do this is by running programs that help current and future contributors do meaningful work in Bitcoin open source.
                   </p>
                     <p>
-                    Our residency programs, online seminars, and the ₿OSS Challenge have been a first step for many of the developers working in the Bitcoin open-source ecosystem today.
+                    Our residency programs, online seminars, and the BOSS Challenge have been a first step for many of the developers working in the Bitcoin open-source ecosystem today.
                   </p>
                   </div>
                   
