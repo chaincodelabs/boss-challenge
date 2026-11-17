@@ -662,7 +662,7 @@ const BossChallengeLanding = () => {
                   <br />
 
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    There are fewer of us building Bitcoin than you’d think, and plenty of work left to do. We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
+                    There are fewer of us building bitcoin than you’d think, and plenty of work left to do. We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
                   </p>
 
                   <br />
@@ -836,7 +836,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time BOSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open source.
+                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time BOSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some support along the way, but to foster the proactive, self-starter spirit that is required in open source.
                   <br />
                   <br />
                   If your work stands out during the challenges, we’ll invite you to a call with Chaincode Labs to discuss opportunities in bitcoin open source and what your next step could be. All participants will have access to options for continuing their education.
