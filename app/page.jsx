@@ -662,7 +662,7 @@ const BossChallengeLanding = () => {
                   <br />
 
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
+                    There are fewer of us building Bitcoin than you’d think, and plenty of work left to do. We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
                   </p>
 
                   <br />
