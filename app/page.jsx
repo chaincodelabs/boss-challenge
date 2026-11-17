@@ -64,7 +64,7 @@ const TestimonialVideos = () => {
       id: 'rita',
       name: 'Rita',
       role: 'LDK Node',
-      fundedBy: '₿trust',
+      fundedBy: 'Btrust',
       vimeoId: '1147090091',
       thumbnail: '/img/boss-alum/rita.jpg',
       quote: "The BOSS challenge really helped me think deeply about bitcoin",
@@ -73,7 +73,7 @@ const TestimonialVideos = () => {
       id: 'chuks',
       name: 'Chuks',
       role: 'LDK Node',
-      fundedBy: '₿trust',
+      fundedBy: 'Btrust',
       vimeoId: '1147095372',
       thumbnail: '/img/boss-alum/chuks.jpg',
       quote: "BOSS program was really intense and fast paced... it really changed my life",
@@ -81,7 +81,7 @@ const TestimonialVideos = () => {
     {
       id: 'janb84',
       name: 'Janb84',
-      role: '₿OSS',
+      role: 'BOSS',
       fundedBy: 'OpenSats',
       vimeoId: '1147095655',
       thumbnail: '/img/boss-alum/janb.png',
@@ -118,7 +118,7 @@ const TestimonialVideos = () => {
       id: 'zealsham',
       name: 'Zealsham',
       role: 'PayJoin',
-      fundedBy: '₿trust',
+      fundedBy: 'Btrust',
       vimeoId: '1147097189',
       thumbnail: '/img/boss-alum/zealsham.jpg',
       quote: "The program equipped me with the knowledge to work on bitcoin full time",
@@ -145,7 +145,7 @@ const TestimonialVideos = () => {
       id: 'ram',
       name: 'Ram',
       role: 'Bitcoin Core',
-      fundedBy: 'ANNOUNCED SOON',
+      fundedBy: 'Localhost Research',
       vimeoId: '1147927069',
       thumbnail: '/img/boss-alum/ram.jpg',
       quote: "It forced me to engage deeply with bitcoin fundamentals",
@@ -662,7 +662,7 @@ const BossChallengeLanding = () => {
                   <br />
 
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    There are fewer of us building Bitcoin than you’d think, and plenty of work left to do. We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
+                    There are fewer of us building bitcoin than you’d think, and plenty of work left to do. We need people with good judgment who care deeply about these ideals, and we hope you’re one of them.
                   </p>
 
                   <br />
@@ -676,7 +676,7 @@ const BossChallengeLanding = () => {
 
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                  The ₿OSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that let you show us what you could bring to bitcoin as a contributor. You’ll also have the chance to work with other participants and get a feel for what a career in bitcoin open source could be like. If you do well, we’ll talk with you about how you could make that transition.
+                  The BOSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that let you show us what you could bring to bitcoin as a contributor. You’ll also have the chance to work with other participants and get a feel for what a career in bitcoin open source could be like. If you do well, we’ll talk with you about how you could make that transition.
                   </p>
                 </div>
 
@@ -695,29 +695,6 @@ const BossChallengeLanding = () => {
               </div>
             </FadeIn>
           </div>
-
-          {/* Top Performers Card - Below Content and Image
-          <FadeIn delay={0.15}>
-            <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#FFF9F0] to-[#FFF3E0] border border-[#FED136]/20 shadow-[0_8px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_12px_40px_rgba(254,209,54,0.15)] transition-all duration-300">
-              <div className="p-6 md:p-8">
-                <div className="flex flex-col md:flex-row items-start gap-5 md:gap-6">
-                  <div className="flex-shrink-0 w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br from-[#FED136] to-[#FEC503] flex items-center justify-center shadow-md">
-                    <svg className="w-6 h-6 md:w-7 md:h-7 text-[#191919]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                    </svg>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg md:text-xl font-bold text-[#191919] mb-2">
-                      Top Performers Get Extra Support
-                    </h3>
-                    <p className="text-sm md:text-base text-[#191919]/80 leading-relaxed">
-                      Top performers from month 1 may be offered <span className="font-semibold text-boss-bg">extra support and 1:1 mentorship</span> during months 2 and 3, with the goal of <span className="font-semibold text-boss-bg">securing full-time funding</span> in the ₿OSS ecosystem.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </FadeIn> */}
         </div>
       </Container>
     </section>
@@ -826,7 +803,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are no deadlines or green check marks, you set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from ₿OSS Challenge alumni who’ve been in your shoes, and even help your fellow participants along the way.
+                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are no deadlines or green check marks, you set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from BOSS Challenge alumni who’ve been in your shoes, and even help your fellow participants along the way.
                 </p>
               </div>
             </FadeIn>
@@ -859,7 +836,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time ₿OSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some supports along the way, but to foster the proactive, self-starter spirit that is required in open source.
+                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time BOSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some support along the way, but to foster the proactive, self-starter spirit that is required in open source.
                   <br />
                   <br />
                   If your work stands out during the challenges, we’ll invite you to a call with Chaincode Labs to discuss opportunities in bitcoin open source and what your next step could be. All participants will have access to options for continuing their education.
@@ -1094,7 +1071,7 @@ const BossChallengeLanding = () => {
                       { year: 2026, name: 'Weikeng', image: 'weikeng.png', github: 'https://github.com/weikengchen', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'Bitcoin PIR', projectUrl: 'https://github.com/Bitcoin-PIR/Bitcoin-PIR' },
                       { year: 2026, name: 'Trevor', image: 'trevor.jpg', github: 'https://github.com/trevarj', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'BHWI', projectUrl: 'https://github.com/wizardsardine/bhwi', project2: 'rust-miniscript', projectUrl2: 'https://github.com/rust-bitcoin/rust-miniscript' },
                       { year: 2026, name: 'Razor', image: 'razor.jpg', github: 'https://github.com/razorbest', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'peer-observer', projectUrl:'https://github.com/peer-observer' },
-                      { year: 2026, name: 'Abeeujah', image: 'abeeujah.jpg', github: 'https://github.com/Abeeujah', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'rust-bitcoin', projectUrl: 'https://github.com/rust-bitcoin/rust-bitcoin' },
+                      { year: 2026, name: 'Abeeujah', image: 'abeeujah.jpg', github: 'https://github.com/Abeeujah', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'rust-bitcoin', projectUrl: 'https://github.com/rust-bitcoin/rust-bitcoin' },
                       { year: 2026, name: 'ek', image: 'ek.jpg', github: 'https://github.com/ekzyis', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'smite', projectUrl: 'https://github.com/lnfuzz/smite' },
                       { year: 2026, name: 'Vadim', image: 'vadim.jpg', github: 'https://github.com/vadim-anfv', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'BDK', projectUrl: 'https://bitcoindevkit.org/' },
                       { year: 2026, name: 'su', image: 'su.jpg', github: 'https://github.com/xstoicunicornx', fundedBy: 'Payjoin Foundation', fundedByUrl: 'https://payjoin.org/foundation', project: 'Payjoin', projectUrl: 'https://payjoindevkit.org/' },
@@ -1107,12 +1084,12 @@ const BossChallengeLanding = () => {
                       { year: 2025, name: 'Sangbida', image: 'sangbida.jpg', github: 'https://github.com/sangbida', fundedBy: 'Blockstream', fundedByUrl: 'https://blockstream.com/', project: 'Core Lightning', projectUrl: 'https://github.com/ElementsProject/lightning' },
                       { year: 2025, name: 'Daniel', image: 'daniel.jpg', github: 'https://github.com/purplekarrot', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
                       { year: 2025, name: 'Ben', image: 'ben.jpg', github: 'https://github.com/benalleng', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
-                      { year: 2025, name: 'Zealsham', image: 'zealsham.jpg', github: 'https://github.com/zealsham/', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
+                      { year: 2025, name: 'Zealsham', image: 'zealsham.jpg', github: 'https://github.com/zealsham/', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'PayJoin', projectUrl: 'https://github.com/payjoin/rust-payjoin/' },
                       { year: 2025, name: 'MacGyver', image: 'macgyver.png', github: 'https://github.com/macgyver13', fundedBy: 'Maelstrom', fundedByUrl: 'https://maelstrom.fund/bitcoin-grant-program/', project: 'Silent Payments', projectUrl: 'https://silentpayments.xyz/' },
                       { year: 2025, name: 'Beulah', image: 'beulah.jpg', github: 'https://github.com/BEULAHEVANJALIN', fundedBy: 'Vora and Second', fundedByUrl: 'https://vora.io', fundedByUrl2: 'https://second.tech', project: 'FROST', projectUrl: 'https://github.com/BEULAHEVANJALIN/frost-td-prework' },
-                      { year: 2025, name: 'Rita', image: 'rita.jpg', github: 'https://github.com/camillarhi', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
+                      { year: 2025, name: 'Rita', image: 'rita.jpg', github: 'https://github.com/camillarhi', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
                       { year: 2025, name: 'Janb84', image: 'janb.png', github: 'https://github.com/janb84', fundedBy: 'OpenSats', fundedByUrl: 'https://opensats.org', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
-                      { year: 2025, name: 'Chuks', image: 'chuks.jpg', github: 'https://github.com/chuksys', fundedBy: '₿trust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
+                      { year: 2025, name: 'Chuks', image: 'chuks.jpg', github: 'https://github.com/chuksys', fundedBy: 'Btrust', fundedByUrl: 'https://btrust.tech', project: 'LDK Node', projectUrl: 'https://github.com/lightningdevkit/ldk-node' },
                       { year: 2025, name: 'Elnosh', image: 'elnosh.jpg', github: 'https://github.com/elnosh', fundedBy: 'OpenSats and Chaincode', fundedByUrl: 'https://opensats.org', fundedByUrl2: 'https://chaincode.com', project: 'LDK and Channel Jamming Research', projectUrl: 'https://lightningdevkit.org/', projectUrl2: 'https://github.com/carlaKC/jam-ln/' },
                       { year: 2025, name: 'Martin', image: 'martin.png', github: 'https://github.com/martinsaposnic', fundedBy: 'Spiral', fundedByUrl: 'https://spiral.xyz/', project: 'LDK', projectUrl: 'https://github.com/lightningdevkit/rust-lightning' },
                       { year: 2025, name: 'Ram', image: 'ram.jpg', github: 'https://github.com/pseudoramdom', fundedBy: 'localhost', fundedByUrl: 'https://lclhost.org', project: 'Bitcoin Core', projectUrl: 'https://github.com/bitcoin/bitcoin' },
@@ -1144,7 +1121,7 @@ const BossChallengeLanding = () => {
                 LEARNING RESOURCES
               </h2>
               <p className="text-xl text-boss-bg/70">
-                Free, world-class content to accelerate your Bitcoin journey
+                Free, world-class content to accelerate your bitcoin journey
               </p>
             </div>
           </FadeIn>
@@ -1154,7 +1131,7 @@ const BossChallengeLanding = () => {
               {[
                 {
                   title: 'Self Paced Seminars',
-                  description: 'Materials are available for anyone to use with readings and discussion questions on various Bitcoin and Lightning topics.',
+                  description: 'Materials are available for anyone to use with readings and discussion questions on various bitcoin and lightning topics.',
                   icon: '/img/lightning.png',
                   url: 'https://chaincode.gitbook.io/seminars/'
                 },
@@ -1166,7 +1143,7 @@ const BossChallengeLanding = () => {
                 },
                 {
                   title: 'Bitcoin Development Philosophy',
-                  description: 'A guide for Bitcoin developers who already understand the basics of concepts and processes such as Proof-of-Work, block building, and the transaction life cycle, and who want to level up by gaining a deeper understanding of Bitcoin\'s design trade-offs and philosophy.',
+                  description: 'A guide for bitcoin developers who already understand the basics of concepts and processes such as Proof-of-Work, block building, and the transaction life cycle, and who want to level up by gaining a deeper understanding of bitcoin\'s design trade-offs and philosophy.',
                   icon: '/img/bitcoindev-philosophy.png',
                   url: 'https://bitcoindevphilosophy.com'
                 },
@@ -1266,10 +1243,10 @@ const BossChallengeLanding = () => {
                   
                 <div className="space-y-6 font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
                     <p>
-                    Chaincode Labs is a Bitcoin research and development center based in New York City. We exist to support Bitcoin. One way we do this is by running programs that help current and future contributors do meaningful work in Bitcoin open source.
+                    Chaincode Labs is a bitcoin research and development center based in New York City. We exist to support bitcoin. One way we do this is by running programs that help current and future contributors do meaningful work in Bitcoin open source.
                   </p>
                     <p>
-                    Our residency programs, online seminars, and the ₿OSS Challenge have been a first step for many of the developers working in the Bitcoin open-source ecosystem today.
+                    Our residency programs, online seminars, and the BOSS Challenge have been a first step for many of the developers working in the bitcoin open-source ecosystem today.
                   </p>
                   </div>
                   
