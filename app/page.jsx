@@ -667,7 +667,7 @@ const BossChallengeLanding = () => {
 
                   <br />
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    Working in bitcoin open source isn’t like any other job. There are no deadlines, no product managers, just people around the world working together. You can build a career here, and learning to chart your own course is part of becoming a good contributor. But getting started on yor own can be slow and lonely.
+                    Working in bitcoin open source isn’t like any other job. There are no deadlines, no product managers, just people around the world working together. You can build a career here, and learning to chart your own course is part of becoming a good contributor. But getting started on your own can be slow and lonely.
                   </p>
                 </div>
 
