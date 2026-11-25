@@ -583,7 +583,7 @@ const BossChallengeLanding = () => {
           Six weeks. No deadlines. Just you, hard problems, and a chance to show your potential as a bitcoin contributor.
         </p>
         <p className="text-[length:clamp(15px,1.4vw,20px)] leading-[1.6] text-boss-muted">
-          January 11 - February 19, 2027 · Applications open December 1
+          January 11 - February 19, 2027 · Free and open to anyone, anywhere · Applications open December 1
         </p>
         <a
           id="apply"
@@ -657,7 +657,7 @@ const BossChallengeLanding = () => {
                 {/* First paragraph with emphasis */}
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                    There’s never been anything like bitcoin. Programmable, open-source money that anyone can use without asking permission. It’s easy to forget that today’s trillion-dollar market started with an email to an obscure cryptography mailing list. Bitcoin has changed significantly since then, but the people building it still care about the same thing: building money that no one can control, and everyone can use.
+                    There’s never been anything like bitcoin. Programmable, open-source money that anyone can use without asking permission. It’s easy to forget that today’s trillion-dollar market started with an email to an obscure cryptography mailing list. Bitcoin has changed significantly since then, but the people working on it still care about the same thing: money that no one can control and everyone can use.
                   </p>
                   <br />
 
@@ -676,7 +676,7 @@ const BossChallengeLanding = () => {
 
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                  The BOSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that let you show us what you could bring to bitcoin as a contributor. You’ll also have the chance to work with other participants and get a feel for what a career in bitcoin open source could be like. If you do well, we’ll talk with you about how you could make that transition.
+                  The ₿OSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that show what you’d bring to bitcoin as a contributor, and work alongside other people doing the same. If your work stands out, we’ll invite you to a one-on-one call to talk about next steps.
                   </p>
                 </div>
 
@@ -748,7 +748,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Apply for the BOSS Challenge: Tell us who you are and why bitcoin. Talk to us about what interests you. Share something you're proud to have built. Once you complete the application you'll be provided with an admissions test to work on. Complete this before the program begins in January.
+                  Apply for the ₿OSS Challenge: tell us who you are, why bitcoin, and what interests you. Share something you’re proud to have built. Once you’ve applied, you’ll get an admissions test. Complete it before the program begins in January.
                 </p>
               </div>
             </FadeIn>
@@ -758,7 +758,7 @@ const BossChallengeLanding = () => {
               <div className="notch notch-lg relative aspect-square w-full max-w-xl mx-auto lg:max-w-none lg:h-full overflow-hidden">
                 <Image
                   src={asset('/img/stage1.webp')}
-                  alt="Stage 1 - Foundation & Core Learning"
+                  alt="Stage 1 - Apply"
                   fill
                   className="object-cover object-[center_35%]"
                 />
@@ -773,7 +773,7 @@ const BossChallengeLanding = () => {
               <div className="notch notch-lg relative aspect-square w-full max-w-xl mx-auto lg:max-w-none lg:h-full overflow-hidden">
                 <Image
                   src={asset('/img/stage2-square.webp')}
-                  alt="Stage 2 - Advanced Programs & Partnerships"
+                  alt="Stage 2 - Show up"
                   fill
                   className="object-cover"
                 />
@@ -803,7 +803,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Expect to spend a minimum of 10 hours per week on the challenges. Outside of the first week, there are no scheduled calls. There are no deadlines or green check marks, you set your own pace. Just like in open source, you decide what to prioritise and when your work is good enough to share. You’ll get guidance from BOSS Challenge alumni who’ve been in your shoes, and even help your fellow participants along the way.
+                  Expect to spend at least 10 hours a week on the challenges. After the first week, there are no scheduled calls. There are no deadlines or green check marks. You set your own pace. Just like in open source, you decide what to prioritize and when your work is good enough to share. You’ll get guidance from ₿OSS Challenge alumni who’ve been in your shoes, and you can help your fellow participants along the way.
                 </p>
               </div>
             </FadeIn>
@@ -836,10 +836,10 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time BOSS contributor</strong> is long, winding, and different for everybody. It is not a straight path. This challenge is not only designed to give you some support along the way, but to foster the proactive, self-starter spirit that is required in open source.
+                  The journey to becoming a <strong className="text-boss-text font-semibold">full-time bitcoin open-source contributor</strong> is long, winding, and different for everybody. The challenge is designed to give you some support along the way, and to build the self-starter habits that open source requires.
                   <br />
                   <br />
-                  If your work stands out during the challenges, we’ll invite you to a call with Chaincode Labs to discuss opportunities in bitcoin open source and what your next step could be. All participants will have access to options for continuing their education.
+                  If your work stands out during the challenges, we’ll invite you to a one-on-one call with Chaincode Labs to talk about what your next step could be. All participants will have access to options for continuing their education.
                 </p>
               </div>
             </FadeIn>
