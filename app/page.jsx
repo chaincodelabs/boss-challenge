@@ -803,7 +803,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Expect to spend at least 10 hours a week on the challenges. After the first week, there are no scheduled calls. There are no deadlines or green check marks. You set your own pace. Just like in open source, you decide what to prioritize and when your work is good enough to share. You’ll get guidance from ₿OSS Challenge alumni who’ve been in your shoes, and you can help your fellow participants along the way.
+                  Expect to spend at least 10 hours a week on the challenges. After the first week, there are no scheduled calls. There are no deadlines or green check marks. You set your own pace. Just like in open source, you decide what to prioritize and when your work is good enough to share. You’ll get guidance from BOSS Challenge alumni who’ve been in your shoes, and you can help your fellow participants along the way.
                 </p>
               </div>
             </FadeIn>
