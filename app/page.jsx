@@ -676,7 +676,7 @@ const BossChallengeLanding = () => {
 
                 <div className="relative">
                   <p className="font-ui text-base md:text-lg text-boss-bg/70 leading-relaxed">
-                  The ₿OSS Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that show what you’d bring to bitcoin as a contributor, and work alongside other people doing the same. If your work stands out, we’ll invite you to a one-on-one call to talk about next steps.
+                  The *BOSS** Challenge gives you a place to start. Over six weeks, you’ll take on a series of challenges that show what you’d bring to bitcoin as a contributor, and work alongside other people doing the same. If your work stands out, we’ll invite you to a one-on-one call to talk about next steps.
                   </p>
                 </div>
 
