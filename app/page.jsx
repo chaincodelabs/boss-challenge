@@ -748,7 +748,7 @@ const BossChallengeLanding = () => {
 
                 {/* Description */}
                 <p className="font-ui text-base text-boss-muted leading-relaxed">
-                  Apply for the ₿OSS Challenge: tell us who you are, why bitcoin, and what interests you. Share something you’re proud to have built. Once you’ve applied, you’ll get an admissions test. Complete it before the program begins in January.
+                  Apply for the BOSS Challenge: tell us who you are, why bitcoin, and what interests you. Share something you’re proud to have built. Once you’ve applied, you’ll get an admissions test. Complete it before the program begins in January.
                 </p>
               </div>
             </FadeIn>
